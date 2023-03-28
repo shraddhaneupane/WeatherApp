@@ -1,0 +1,58 @@
+div {
+    display: flex;
+    position: relative;
+    margin-top: 5%;
+  }
+  h3 {
+    text-align: left;
+    margin-top: 0%;
+    color:blue
+  }
+  h2{
+   margin-left: 350px;
+   margin-bottom: -30px;
+   margin-top: 0%;
+  }
+  .addcityBtn {
+    position: absolute;
+    right: 0;
+    color: blue;
+    margin-right: 30px;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 5%;
+  }
+  
+  td, th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    
+  }
+
+  .empty-ctn{
+    padding: 8px;
+    text-align: center;
+    color:rgb(98, 130, 46);
+    margin-left: 25%;
+   
+  }
+
+
+  .delete{
+    color: blue;
+
+  }
+  .view{
+    color: blue;
+    margin-right: 10px;
+
+  }
+  body {
+    background-image: url('../../assets/weather.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

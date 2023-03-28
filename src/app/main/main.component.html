@@ -1,0 +1,59 @@
+<app-header></app-header>
+<div class="row">
+  <button class="addcityBtn" [routerLink]="['/addCity']"> Add City</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>City Name</th>
+      <th>Current Temperature</th>
+      <th>High/Low Temperature</th>
+      <th> Outcast</th>
+      <th> Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of cities">
+      <td>{{ row.name }}</td>
+      <td>{{ kelvinToUnit(row.main.temp) | number :'1.2-2'}}&deg;{{unitSymbol}}</td>
+      <td>{{ kelvinToUnit(row.main.temp_max) | number :'1.2-2'}}&deg;{{unitSymbol}} / {{kelvinToUnit(row.main.temp_min)
+        | number :'1.2-2'}}&deg;{{unitSymbol}}</td>
+      <td>{{row.weather[0].description}}</td>
+      <td><button class="view" (click)="viewCity(row.name)"> View </button> <button class="delete"
+          (click)="deleteCity(row.name)"> Delete</button></td>
+
+    </tr>
+
+</table>
+
+
+
+<div class="empty-ctn" *ngIf="cities.length ===0">
+  <h2>No city found. Please add a city.</h2>
+</div>
+
+<div *ngIf="showCity">
+  <h2>City Name : {{cityToView[0].city.name}}</h2>
+</div>
+<table *ngIf="showCity">
+
+  <thead>
+    <tr>
+
+      <th>Days of week </th>
+      <th>High/Low Temperature</th>
+      <th> Outcast</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of cityToView[0].list; let i = index">
+      <ng-container *ngIf="i%8 ==0">
+      <td>{{ row.dt_txt | date :'EEEE'}} </td>
+      <td>{{ kelvinToUnit(row.main.temp_max) | number :'1.2-2'}}&deg;{{unitSymbol}} / {{kelvinToUnit(row.main.temp_min)
+        | number :'1.2-2'}}&deg;{{unitSymbol}}</td>
+      <td>{{row.weather[0].description}}</td>
+      </ng-container>
+    </tr>
+
+</table>

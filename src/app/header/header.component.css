@@ -1,0 +1,22 @@
+.weatherapp{
+    color: magenta;
+    text-align: center;
+    font-size: 200%;
+}
+.btn{
+    margin-top: 4%;
+}
+.logoutBtn{
+    position: absolute;
+    right: 0;
+    color: blue;
+    margin-right: 30px;
+   
+}
+.settingsBtn{
+    position: absolute;
+    right: 0;
+    color:blue;
+    margin-right: 90px;
+  
+}

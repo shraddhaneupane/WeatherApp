@@ -1,0 +1,14 @@
+<div>
+    <label>
+      <input type="radio" [(ngModel)]="unit" value="Celsius">
+      Celsius
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="radio" [(ngModel)]="unit" value="Fahrenheit">
+      Fahrenheit
+    </label>
+  </div>
+
+  <button (click)="saveSettings()">Save</button>

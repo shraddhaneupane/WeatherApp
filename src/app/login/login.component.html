@@ -1,0 +1,23 @@
+<body>
+
+<div class= "grey-box">
+    <p> Need to login?   Weather-app </p><img src="https://www.creativefabrica.com/wp-content/uploads/2021/03/31/weather-icon-illustration03-Graphics-10205167-3-580x375.png">
+    <div class="login-box">
+        <div class="email">
+            Email or Username:
+        </div>
+        <input type="text" [(ngModel)]="email">
+
+        <div class="psd" >
+            Password:
+        </div>
+        <input type="text" [(ngModel)]= "password">
+
+
+        <div >
+            <button class="login-btn" (click)="login()"> Login </button>
+        </div>
+       
+    </div>
+</div>
+</body>
